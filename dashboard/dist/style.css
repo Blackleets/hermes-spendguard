@@ -1,0 +1,17 @@
+.sg-page { max-width: 880px; margin: 0 auto; padding: 24px 16px 48px; font-family: Georgia, 'Times New Roman', serif; color: #1d2733; }
+.sg-head h1 { font-size: 30px; margin: 0 0 4px; }
+.sg-head p { opacity: .72; margin: 0 0 20px; }
+.sg-card { background: #fbf8f1; border: 1px solid #e3dcc8; border-radius: 12px; padding: 16px 18px; margin-bottom: 16px; }
+.sg-card h3 { margin: 0 0 10px; font-size: 17px; }
+.sg-bar-row { display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; margin-bottom: 6px; }
+.sg-bar { height: 12px; border-radius: 6px; background: #e9e2cd; overflow: hidden; }
+.sg-fill { height: 100%; border-radius: 6px; transition: width .4s ease; }
+.sg-bar-ok { background: #3d9970; }
+.sg-bar-warn { background: #e6a817; }
+.sg-bar-hot { background: #e2661e; }
+.sg-bar-over { background: #c0392b; }
+.sg-meta, .sg-nocap { opacity: .75; font-size: 13.5px; margin: 8px 0 0; }
+.sg-table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.sg-table th, .sg-table td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #e3dcc8; }
+.sg-table td:nth-child(2), .sg-table td:nth-child(3) { font-variant-numeric: tabular-nums; }
+.sg-foot { opacity: .65; font-size: 13px; text-align: center; margin-top: 8px; }

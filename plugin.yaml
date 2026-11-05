@@ -1,0 +1,20 @@
+name: hermes-spendguard
+version: 0.1.0
+requires_hermes: ">=0.21.5"
+description: "SpendGuard — a wallet guard for Hermes Agent. Records every provider API call's cost in a local ledger (provider-reported cost when available, otherwise public list-price estimates), tracks it against daily/monthly USD budgets you set, warns as you approach the cap, and HARD-STOPS new turns before they reach the model when the budget runs out — the block itself makes zero model calls. Budgets change only via the human-typed /spendguard command: the agent can read its spend, never raise its own cap. No network, no credentials, no telemetry."
+author: Lee Renteria (Blackleets)
+license: MIT
+tags: [cost, budget, spend, guardrails, safety, dashboard, automation]
+provides_tools:
+  - spendguard_status
+  - spendguard_report
+provides_hooks:
+  - pre_llm_call
+  - pre_tool_call
+  - post_api_request
+  - post_auxiliary_call
+config_schema:
+  daily_budget_usd: {type: float, default: 0, label: "Daily budget (USD)", description: "Daily spend cap in USD. 0 = no daily cap. Set live with /spendguard set daily <amount>"}
+  monthly_budget_usd: {type: float, default: 0, label: "Monthly budget (USD)", description: "Monthly spend cap in USD. 0 = no monthly cap. Set live with /spendguard set monthly <amount>"}
+  enforcement: {type: str, default: hard, label: "Enforcement", description: "'hard' blocks new turns at the cap (zero model calls); 'warn' only warns"}
+  strict_tools: {type: bool, default: true, label: "Strict tool blocking", description: "Also block tool calls mid-turn once over budget"}

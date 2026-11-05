@@ -1,0 +1,1 @@
+{"count_auxiliary":true,"daily_budget_usd":10.0,"enforcement":"hard","fallback_rate_per_1m":null,"monthly_budget_usd":200.0,"prices":{"my-finetuned-model":[1.5,6.0]},"strict_tools":true,"warn_at_percent":[75,90]}

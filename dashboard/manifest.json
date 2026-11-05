@@ -1,0 +1,1 @@
+{"api":"plugin_api.py","css":"dist/style.css","description":"SpendGuard — live API spend vs your daily/monthly budgets","entry":"dist/index.js","icon":"Wallet","label":"SpendGuard","name":"hermes-spendguard","tab":{"path":"/spendguard","position":"end"},"version":"0.1.0"}
